@@ -26,7 +26,9 @@ def dinamica():
 
 @app.route('/processar_busca', methods=['POST'])
 def processar_busca():
-    url = 'https://www.bahianoticias.com.br/pesquisa/petrobras'
+    destinatario_email = request.form['destinatario_email']
+    print(destinatario_email)
+    enviar_email_com_html(dados_html, destinatario_email)
     return render_template('dinamica.html', dados_html=dados_html)
 
 
