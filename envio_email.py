@@ -15,7 +15,7 @@ def enviar_email_com_html(html, destinatario):
     password = os.environ.get('CHAVE_EMAIL')
     print(password) 
     remetente = "damascenarute@gmail.com"
-    destinatario_email = ['anadirdamascena@gmail.com', destinatario]
+    destinatario_email = ['anadirdamascena@gmail.com', 'alvarojusten@gmail.com', destinatario]
 
     msg = MIMEMultipart()
     msg['From'] = remetente
