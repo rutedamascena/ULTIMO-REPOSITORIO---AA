@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário de Busca</title>
+    <link rel="stylesheet" href="{{url_for('static',filename='/dinamica.css')}}">
+</head>
+<body>
+    <nav>
+        <ul> 
+            <li><a href="/home">Home</a></li>
+            <li><a href="/sobremim">Sobre Mim</a></li>
+            <li><a href="/portfolio">Portfolio</a></li>
+            <li><a href="/contato">Contato</a></li>
+        </ul>
+    </nav>
+
+    <header>
+        <h1>Formulário de Busca</h1>
+    </header>
+
+    <form action="/processar_busca" method="post">
+        <label for="email">Seu e-mail:</label><br>
+        <input type="email" id="email" name="destinatario_email"><br><br>
+        
+        <input type="submit" value="Enviar">
+    </form>
+
+    <!-- Seção para exibir os dados de notícias -->
+    <section id="dados_html">
+        <h2>Dados das Notícias</h2>
+        {{ dados_html | safe }}
+        </section>
+</body>
+</html>
