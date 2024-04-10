@@ -5,7 +5,7 @@ from email.mime.text import MIMEText
 from scraping import dados_html
 from dotenv import load_dotenv 
 import os
-load_dotenv()
+
 
 
 def enviar_email_com_html(html, destinatario):
